@@ -9,11 +9,11 @@ import jakarta.persistence.Id;
 public class Juego {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    private long id;
 
-    String nombre;
+    private String nombre;
 
-    String plataforma;
+    private String plataforma;
 
     public Juego(){}
 
@@ -21,10 +21,27 @@ public class Juego {
         this.nombre=nombre;
         this.plataforma=plataforma;
     }
+    public long getId() {
+        return id;
+    }
 
-    public Juego(long id, String nombre, String plataforma) {
+    public void setId(long id) {
         this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getPlataforma() {
+        return plataforma;
+    }
+
+    public void setPlataforma(String plataforma) {
         this.plataforma = plataforma;
     }
 }
