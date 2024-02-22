@@ -1,6 +1,8 @@
 package com.example.apiud6sheila.modelo;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity(name = "puntuaciones")
 public class Puntuacion {
@@ -8,8 +10,10 @@ public class Puntuacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
+    @NotBlank(message = "Nombre no puede estar vacío")
     private String nombre;
 
+    @Min(value = 0,message = "No puede ser menor que 0")
     private long puntuacion;
 
     @ManyToOne
