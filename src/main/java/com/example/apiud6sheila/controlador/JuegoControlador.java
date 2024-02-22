@@ -39,11 +39,7 @@ public class JuegoControlador {
     //añadir un juego
     @PostMapping
     public Juego añadirJuego(@RequestBody Juego juego) {
-        if (juego.getNombre() instanceof String || !(juego.getNombre()==null) ||
-                juego.getPlataforma() instanceof String || !(juego.getPlataforma()==null)) {
             return juegoRepositorio.save(juego);
-        }
-        return null;
     }
 
     //Editar un juego
@@ -63,6 +59,4 @@ public class JuegoControlador {
     public void eliminarJuego(@PathVariable long id){
         juegoRepositorio.deleteById(id);
     }
-
-
 }
