@@ -1,25 +1,20 @@
 package com.example.apiud6sheila.controlador;
 
-import com.example.apiud6sheila.modelo.Juego;
+
 import com.example.apiud6sheila.modelo.Puntuacion;
 import com.example.apiud6sheila.repositorio.JuegoRepositorio;
 import com.example.apiud6sheila.repositorio.PuntuacionRepositorio;
-import jakarta.persistence.criteria.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/puntuacion")
 public class PuntuacionControlador {
-
-    /*
-    - Listar las puntuaciones de un juego
-     */
 
     @Autowired
     private PuntuacionRepositorio puntuacionRepositorio;
@@ -34,12 +29,18 @@ public class PuntuacionControlador {
         return puntuacionRepositorio.findAll();
     }
 
+    //listar las puntuaciones de un juego de mayor a menor
+    @GetMapping("/juego/{id}")
+    public List<Puntuacion> listarPorJuego(@PathVariable Long id){
+        return puntuacionRepositorio.findByJuegoIdOOrderByPuntuacionPuntuacionDesc(id);
+    }
+
     //listar todas las puntuaciones ordenadas por juego y puntuación
     @GetMapping("/ordenadasporjuego")
-    public List<Puntuacion> listarPuntuacionesOrdenadasPorJuego(){
-
+    public List<Puntuacion> listarPuntuacionesOrdenadasPorJuegoYPuntuacion(){
         return puntuacionRepositorio.findAll(Sort.by(Sort.Direction.ASC, "juego").and(Sort.by(Sort.Direction.DESC, "puntuacion")));
     }
+
 
     //Obtener una puntuacion
     @GetMapping("/{id}")
@@ -56,7 +57,7 @@ public class PuntuacionControlador {
             puntuacion.setJuego(juego);
             return puntuacionRepositorio.save(puntuacion);
         }).orElseThrow(()->
-                new RuntimeException("Categoria no encontrada"));
+                new RuntimeException("Juego no encontrado"));
         return punt;
     }
 
