@@ -46,12 +46,15 @@ public class JuegoControlador {
     @PutMapping("/{id}")
     public Juego editarJuego(@PathVariable long id, @RequestBody Juego juego){
         return juegoRepositorio.findById(id).map(juegoTemp ->{
-            juegoTemp.setNombre((juego.getNombre()!=null)?juego.getNombre():juegoTemp.getNombre());
-            juegoTemp.setPlataforma((juego.getPlataforma()!=null)?juego.getPlataforma():juegoTemp.getPlataforma());
-            return juegoRepositorio.save(juegoTemp);
+            if (juego.getNombre()!=null || juego.getPlataforma()!=null) {
+                juegoTemp.setNombre(!(juego.getNombre().isBlank()) ? juego.getNombre() : juegoTemp.getNombre());
+                juegoTemp.setPlataforma((juego.getPlataforma() != null) ? juego.getPlataforma() : juegoTemp.getPlataforma());
+                return juegoRepositorio.save(juegoTemp);
+            }
+            return null;
 
         }).orElseThrow(()->
-                new RuntimeException("Categoria no encontrada"));
+                new RuntimeException("No se puede editar"));
     }
 
     //Eliminar un juego

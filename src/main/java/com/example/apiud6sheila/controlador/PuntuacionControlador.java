@@ -77,6 +77,11 @@ public class PuntuacionControlador {
         puntuacionRepositorio.deleteById(id);
     }
 
+    @GetMapping("/record")
+    public List<Puntuacion> getRecord(){
+        return puntuacionRepositorio.findAllRecords();
+    }
+
 
 
 }
