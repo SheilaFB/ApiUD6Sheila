@@ -50,6 +50,7 @@ public class JuegoControlador {
             if (juego.getNombre()!=null || juego.getPlataforma()!=null) {
                 juegoTemp.setNombre(!(juego.getNombre().isBlank()) ? juego.getNombre() : juegoTemp.getNombre());
                 juegoTemp.setPlataforma((juego.getPlataforma() != null) ? juego.getPlataforma() : juegoTemp.getPlataforma());
+                juegoTemp.setImagen(!(juego.getImagen().isBlank()) ? juego.getImagen() : juegoTemp.getImagen());
                 return juegoRepositorio.save(juegoTemp);
             }
             return null;

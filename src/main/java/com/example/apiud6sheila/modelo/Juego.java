@@ -18,11 +18,16 @@ public class Juego {
     @NotBlank(message = "La plataforma no puede estar vacía")
     private String plataforma;
 
+    @NotBlank(message = "La imagen no puede estar vacía")
+    private String imagen;
+
+
     public Juego(){}
 
-    public Juego(String nombre, String plataforma){
+    public Juego(String nombre, String plataforma, String imagen){
         this.nombre=nombre;
         this.plataforma=plataforma;
+        this.imagen=imagen;
     }
     public long getId() {
         return id;
@@ -46,5 +51,13 @@ public class Juego {
 
     public void setPlataforma(String plataforma) {
         this.plataforma = plataforma;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }

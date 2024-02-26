@@ -33,7 +33,7 @@ public class PuntuacionControlador {
     //listar las puntuaciones de un juego de mayor a menor
     @GetMapping("/juego/{id}")
     public List<Puntuacion> listarPorJuego(@PathVariable Long id){
-        return puntuacionRepositorio.findByJuegoId(id);
+        return puntuacionRepositorio.findByJuegoIdOrderByPuntuacionDesc(id);
     }
 
     //listar todas las puntuaciones ordenadas por juego y puntuación
