@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "nombre": "Olaf",
+    "puntuacion": 789,
+    "juego": {
+      "id": 1,
+      "nombre": "Tetris",
+      "plataforma": "PC",
+      "imagen": "https://play-lh.googleusercontent.com/ILMYT7PYDpF1771O6lixyX01a3JEGYKotMshaq6rFFxQnZPGb_byVbfgMZRJlG4pITJPfqoUC0g=w1296-h2160-rw"
+    }
+  },
+  {
+    "id": 2,
+    "nombre": "Elsa",
+    "puntuacion": 456,
+    "juego": {
+      "id": 1,
+      "nombre": "Tetris",
+      "plataforma": "PC",
+      "imagen": "https://play-lh.googleusercontent.com/ILMYT7PYDpF1771O6lixyX01a3JEGYKotMshaq6rFFxQnZPGb_byVbfgMZRJlG4pITJPfqoUC0g=w1296-h2160-rw"
+    }
+  },
+  {
+    "id": 3,
+    "nombre": "Ana",
+    "puntuacion": 123,
+    "juego": {
+      "id": 1,
+      "nombre": "Tetris",
+      "plataforma": "PC",
+      "imagen": "https://play-lh.googleusercontent.com/ILMYT7PYDpF1771O6lixyX01a3JEGYKotMshaq6rFFxQnZPGb_byVbfgMZRJlG4pITJPfqoUC0g=w1296-h2160-rw"
+    }
+  },
+  {
+    "id": 4,
+    "nombre": "Shrek",
+    "puntuacion": 123,
+    "juego": {
+      "id": 2,
+      "nombre": "Pac-Man",
+      "plataforma": "PC",
+      "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202109/2712/RqtJf2ccRcw4iBhjVXe2lsSq.jpg"
+    }
+  },
+  {
+    "id": 5,
+    "nombre": "Fiona",
+    "puntuacion": 456,
+    "juego": {
+      "id": 2,
+      "nombre": "Pac-Man",
+      "plataforma": "PC",
+      "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202109/2712/RqtJf2ccRcw4iBhjVXe2lsSq.jpg"
+    }
+  },
+  {
+    "id": 6,
+    "nombre": "Asno",
+    "puntuacion": 789,
+    "juego": {
+      "id": 2,
+      "nombre": "Pac-Man",
+      "plataforma": "PC",
+      "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202109/2712/RqtJf2ccRcw4iBhjVXe2lsSq.jpg"
+    }
+  },
+  {
+    "id": 7,
+    "nombre": "Dragona",
+    "puntuacion": 4567,
+    "juego": {
+      "id": 2,
+      "nombre": "Pac-Man",
+      "plataforma": "PC",
+      "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202109/2712/RqtJf2ccRcw4iBhjVXe2lsSq.jpg"
+    }
+  },
+  {
+    "id": 8,
+    "nombre": "Mulan",
+    "puntuacion": 4567,
+    "juego": {
+      "id": 3,
+      "nombre": "Mario Kart",
+      "plataforma": "Nintendo Switch",
+      "imagen": "https://i.blogs.es/acd781/mario-kart-8-deluxe/1366_2000.webp"
+    }
+  },
+  {
+    "id": 9,
+    "nombre": "Mushu",
+    "puntuacion": 456,
+    "juego": {
+      "id": 3,
+      "nombre": "Mario Kart",
+      "plataforma": "Nintendo Switch",
+      "imagen": "https://i.blogs.es/acd781/mario-kart-8-deluxe/1366_2000.webp"
+    }
+  },
+  {
+    "id": 10,
+    "nombre": "Li Shang",
+    "puntuacion": 123,
+    "juego": {
+      "id": 3,
+      "nombre": "Mario Kart",
+      "plataforma": "Nintendo Switch",
+      "imagen": "https://i.blogs.es/acd781/mario-kart-8-deluxe/1366_2000.webp"
+    }
+  },
+  {
+    "id": 11,
+    "nombre": "Mavis",
+    "puntuacion": 456,
+    "juego": {
+      "id": 4,
+      "nombre": "Vampire Survivors",
+      "plataforma": "PC",
+      "imagen": "https://img.asmedia.epimg.net/resizer/EUv4uOthEPCFm0qa47X2_ssG594=/1472x828/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/3BJUXU4SZRKJZFAKUZT73X4EVE.jpg"
+    }
+  },
+  {
+    "id": 12,
+    "nombre": "Drácula",
+    "puntuacion": 789,
+    "juego": {
+      "id": 4,
+      "nombre": "Vampire Survivors",
+      "plataforma": "PC",
+      "imagen": "https://img.asmedia.epimg.net/resizer/EUv4uOthEPCFm0qa47X2_ssG594=/1472x828/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/3BJUXU4SZRKJZFAKUZT73X4EVE.jpg"
+    }
+  },
+  {
+    "id": 13,
+    "nombre": "Frankenstein",
+    "puntuacion": 555,
+    "juego": {
+      "id": 4,
+      "nombre": "Vampire Survivors",
+      "plataforma": "PC",
+      "imagen": "https://img.asmedia.epimg.net/resizer/EUv4uOthEPCFm0qa47X2_ssG594=/1472x828/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/3BJUXU4SZRKJZFAKUZT73X4EVE.jpg"
+    }
+  },
+  {
+    "id": 14,
+    "nombre": "Han Solo",
+    "puntuacion": 555,
+    "juego": {
+      "id": 5,
+      "nombre": "Temple Run",
+      "plataforma": "Android",
+      "imagen": "https://i.ytimg.com/vi/H_2no6r5pag/maxresdefault.jpg"
+    }
+  },
+  {
+    "id": 15,
+    "nombre": "Anakin Skywalker",
+    "puntuacion": 888,
+    "juego": {
+      "id": 5,
+      "nombre": "Temple Run",
+      "plataforma": "Android",
+      "imagen": "https://i.ytimg.com/vi/H_2no6r5pag/maxresdefault.jpg"
+    }
+  },
+  {
+    "id": 16,
+    "nombre": "Padmé Amidala",
+    "puntuacion": 999,
+    "juego": {
+      "id": 5,
+      "nombre": "Temple Run",
+      "plataforma": "Android",
+      "imagen": "https://i.ytimg.com/vi/H_2no6r5pag/maxresdefault.jpg"
+    }
+  },
+  {
+    "id": 17,
+    "nombre": "Jack Sparrow",
+    "puntuacion": 999,
+    "juego": {
+      "id": 6,
+      "nombre": "Subway Surfers",
+      "plataforma": "Android",
+      "imagen": "https://cdn.mobilesyrup.com/wp-content/uploads/2019/12/subway-surfers.jpg"
+    }
+  },
+  {
+    "id": 18,
+    "nombre": "Elizabeth Swann",
+    "puntuacion": 888,
+    "juego": {
+      "id": 6,
+      "nombre": "Subway Surfers",
+      "plataforma": "Android",
+      "imagen": "https://cdn.mobilesyrup.com/wp-content/uploads/2019/12/subway-surfers.jpg"
+    }
+  },
+  {
+    "id": 19,
+    "nombre": "Will Turner",
+    "puntuacion": 777,
+    "juego": {
+      "id": 6,
+      "nombre": "Subway Surfers",
+      "plataforma": "Android",
+      "imagen": "https://cdn.mobilesyrup.com/wp-content/uploads/2019/12/subway-surfers.jpg"
+    }
+  }
+]
