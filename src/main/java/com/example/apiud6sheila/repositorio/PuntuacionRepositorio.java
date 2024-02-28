@@ -1,5 +1,12 @@
 package com.example.apiud6sheila.repositorio;
 
+/*
+ * Clase: PuntuacionRepositorio
+ * Autor: Sheila Feijoo
+ * Fecha de creación: 2024
+ * Descripción-Enunciado: Interfaz repostitorio de Puntuacion para operaciones CRUD.
+ */
+
 import com.example.apiud6sheila.modelo.Puntuacion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

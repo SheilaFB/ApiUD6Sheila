@@ -1,5 +1,12 @@
 package com.example.apiud6sheila.modelo;
 
+/*
+ * Clase: Juego
+ * Autor: Sheila Feijoo
+ * Fecha de creación: 2024
+ * Descripción-Enunciado: Clase modelo de Juego. Se corresponde con la tabla juegos.
+ */
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

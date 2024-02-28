@@ -1,5 +1,12 @@
 package com.example.apiud6sheila.modelo;
 
+/*
+ * Clase: Puntuación
+ * Autor: Sheila Feijoo
+ * Fecha de creación: 2024
+ * Descripción-Enunciado: Clase modelo de Puntuación. Se corresponde con la tabla puntuaciones.
+ */
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

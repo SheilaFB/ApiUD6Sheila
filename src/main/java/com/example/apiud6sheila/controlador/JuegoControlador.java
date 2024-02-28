@@ -1,5 +1,12 @@
 package com.example.apiud6sheila.controlador;
 
+/*
+ * Clase: JuegoControlador
+ * Autor: Sheila Feijoo
+ * Fecha de creación: 2024
+ * Descripción-Enunciado: Clase controlador de juegos
+ */
+
 import com.example.apiud6sheila.modelo.Juego;
 import com.example.apiud6sheila.repositorio.JuegoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;

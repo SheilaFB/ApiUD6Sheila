@@ -1,5 +1,11 @@
 package com.example.apiud6sheila.controlador;
 
+/*
+ * Clase: PuntuacionControlador
+ * Autor: Sheila Feijoo
+ * Fecha de creación: 2024
+ * Descripción-Enunciado: Clase controlador de puntuaciones
+ */
 
 import com.example.apiud6sheila.modelo.Puntuacion;
 import com.example.apiud6sheila.repositorio.JuegoRepositorio;
@@ -62,7 +68,7 @@ public class PuntuacionControlador {
         return punt;
     }
 
-    //Editar una datos puntuación
+    //Editar una puntuación
     @PutMapping("/{id}")
     public Puntuacion editarPuntuacion(@PathVariable long id, @RequestBody Puntuacion puntuacion){
         return puntuacionRepositorio.findById(id).map(puntuacionTemp ->{
@@ -78,6 +84,7 @@ public class PuntuacionControlador {
         puntuacionRepositorio.deleteById(id);
     }
 
+    //Obtener la mayor puntuación de cada juego
     @GetMapping("/record")
     public List<Puntuacion> getRecord(){
         return puntuacionRepositorio.findAllRecords();
