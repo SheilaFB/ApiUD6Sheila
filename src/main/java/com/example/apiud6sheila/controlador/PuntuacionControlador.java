@@ -68,14 +68,21 @@ public class PuntuacionControlador {
         return punt;
     }
 
-    //Editar una puntuación
+    //Editar una puntuación. Si algún valor es nulo no lo modifica. Si aunque no sea nulo está vacío tampoco lo modifica.
+    //Si no lo puede modificar por que está nulo o vacío va a devolver el registro sin modificar para evitar errores.
+    //Si ocurre algún otro error devolverá que no puede modificar el juego
+    //Podría modificarse si se quiesiera para que en vez de devolver el registro sin modificar devolviese el error.
     @PutMapping("/{id}")
-    public Puntuacion editarPuntuacion(@PathVariable long id, @RequestBody Puntuacion puntuacion){
+    public Puntuacion editarPuntuacion(@PathVariable Long id, @RequestBody Puntuacion puntuacion){
         return puntuacionRepositorio.findById(id).map(puntuacionTemp ->{
-            puntuacionTemp.setNombre((puntuacion.getNombre()!=null)?puntuacion.getNombre():puntuacionTemp.getNombre());
-            puntuacionTemp.setPuntuacion((puntuacion.getPuntuacion()!=0?puntuacion.getPuntuacion(): puntuacionTemp.getPuntuacion()));
-            return puntuacionRepositorio.save(puntuacionTemp);
-        }).orElseThrow();
+            if (puntuacion.getNombre()!=null) {
+                puntuacionTemp.setNombre(!(puntuacion.getNombre().isBlank()) ? puntuacion.getNombre() : puntuacionTemp.getNombre());
+                puntuacionTemp.setPuntuacion((puntuacion.getPuntuacion() != null ? puntuacion.getPuntuacion() : puntuacionTemp.getPuntuacion()));
+                return puntuacionRepositorio.save(puntuacionTemp);
+            }
+            return puntuacionTemp;
+        }).orElseThrow(()->
+                new RuntimeException("No se puede editar"));
     }
 
     //Eliminar una puntuación

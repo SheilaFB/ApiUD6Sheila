@@ -50,13 +50,16 @@ public class JuegoControlador {
             return juegoRepositorio.save(juego);
     }
 
-    //Editar un juego
+    //Editar un juego. Si algún valor es nulo no lo modifica. Si aunque no sea nulo está vacío tampoco lo modifica.
+    //Si no lo puede modificar por que está nulo o vacío va a devolver el registro sin modificar para evitar errores.
+    //Si ocurre algún otro error devolverá que no puede modificar el juego.
+    //Podría modificarse si se quiesiera para que en vez de devolver el registro sin modificar devolviese el error.
     @PutMapping("/{id}")
     public Juego editarJuego(@PathVariable long id, @RequestBody Juego juego){
         return juegoRepositorio.findById(id).map(juegoTemp ->{
-            if (juego.getNombre()!=null || juego.getPlataforma()!=null) {
+            if (juego.getNombre()!=null && juego.getPlataforma()!=null && juego.getImagen()!=null) {
                 juegoTemp.setNombre(!(juego.getNombre().isBlank()) ? juego.getNombre() : juegoTemp.getNombre());
-                juegoTemp.setPlataforma((juego.getPlataforma() != null) ? juego.getPlataforma() : juegoTemp.getPlataforma());
+                juegoTemp.setPlataforma(!(juego.getPlataforma().isBlank()) ? juego.getPlataforma() : juegoTemp.getPlataforma());
                 juegoTemp.setImagen(!(juego.getImagen().isBlank()) ? juego.getImagen() : juegoTemp.getImagen());
                 return juegoRepositorio.save(juegoTemp);
             }

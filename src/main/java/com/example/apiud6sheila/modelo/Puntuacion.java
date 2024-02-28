@@ -10,6 +10,7 @@ package com.example.apiud6sheila.modelo;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity(name = "puntuaciones")
 public class Puntuacion {
@@ -21,7 +22,7 @@ public class Puntuacion {
     private String nombre;
 
     @Min(value = 0,message = "No puede ser menor que 0")
-    private long puntuacion;
+    private Long puntuacion;
 
     @ManyToOne
     @JoinColumn(name="id_juego")
@@ -29,7 +30,7 @@ public class Puntuacion {
 
     public Puntuacion(){}
 
-    public Puntuacion(String nombre, long puntuacion){
+    public Puntuacion(String nombre, Long puntuacion){
         this.nombre=nombre;
         this.puntuacion=puntuacion;
     }
@@ -50,11 +51,11 @@ public class Puntuacion {
         this.nombre = nombre;
     }
 
-    public long getPuntuacion() {
+    public Long getPuntuacion() {
         return puntuacion;
     }
 
-    public void setPuntuacion(long puntuacion) {
+    public void setPuntuacion(Long puntuacion) {
         this.puntuacion = puntuacion;
     }
 
